@@ -7,17 +7,28 @@
     <title>ToDo | List</title>
 </head>
 <body>
+    {% if request.user.is_authenticated %}
+        <a href="">LogOut</a>
+    {% else %}
+        <a href="">LogIn</a>
+    {% endif %}
+    <!-- <p>{{request.user}}</p> -->
+    <hr>
     <h3>My To Do List</h3>
     <a href="{% url 'task-create'  %}">Add Task</a>
     <table>
         <tr>
             <th>Items</th>
             <th></th>
+            <th></th>
         </tr>
         {% for task in tasks %}
         <tr>
             <td>{{task.title}}</td>
             <td><a href="{% url 'task' task.id %}">View</a></ftd>
+            <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
+            <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
+
         </tr>
         {% empty %}
         <h2>No items found</h2>
