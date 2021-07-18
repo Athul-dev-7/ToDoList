@@ -9,11 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>To Do Items</title>
 
     <style>
         body {
-            background-color: #FAFAFA;
+            background-color: #f3ecec;
             font-family: 'Nunito', sans-serif;
             padding-top: 50px;
         }
@@ -34,8 +36,9 @@
             max-width: 550px;
             margin: auto;
             background-color: #fff;
-            -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
-            box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+            -webkit-box-shadow: 3px 3px 13px 7px rgba(0, 0, 0, 0.21);
+            box-shadow: 3px 10px 13px 7px rgba(0, 0, 0, 0.21);
+            border-radius: 5px 5px 5px 5px
         }
 
         input {
@@ -49,7 +52,7 @@
             color: #fff;
             padding: 10px;
             border-radius: 5px 5px 0 0;
-            background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+            background-color:#1cacb6;
         }
 
         .header a {
@@ -62,8 +65,12 @@
             align-items: center;
             justify-content: space-between;
             background-color: #fff;
-            border-top: 1px solid #dfe4ea;
+            border-top: 3px solid #dfe4ea;
             overflow: hidden;
+        }
+
+        .task-wrapper:hover{
+            background-color:rgb(167, 201, 17)
         }
 
         .task-title {
@@ -94,28 +101,17 @@
         .delete-link {
             text-decoration: none;
             font-weight: 900;
-            color: #cf4949;
+            color: #e20d0d;
             font-size: 22px;
             line-height: 0;
-            padding: 20px 10px;
+            padding: 20px 20px;
         }
-
-        .dropArea {
-            background-color: #f1f2f6;
-            color: black;
-            border: #ced6e0 1px solid;
-        }
-
-        .selectedTask {
-            opacity: 0.6;
-        }
-
 
         #add-link {
-            color: #EB796F;
+            color: rgb(10, 238, 10);
             text-decoration: none;
             font-size: 42px;
-            text-shadow: 1px 1px #81413b;
+            text-shadow: 1px 1px #ec1c09;
         }
 
         #search-add-wrapper {
@@ -134,26 +130,36 @@
             width: 90%;
         }
 
-        label {
-            padding-top: 10px !important;
-            display: block;
-        }
-
-
         .button {
             border: 1px solid #757575;
-            background-color: #FFF;
-            color: #EB796F;
+            background-color: rgb(255, 255, 255);
+            color: #0c0c0c;
             padding: 10px;
             font-size: 14px;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
+            margin-left: 3px;
+        }
+
+        .button:hover{
+            background-color:rgb(10, 238, 10)
         }
 
         .card-body {
             padding: 20px;
         }
+
+        .no-task{
+            display: flex;
+            justify-content: space-between;
+            justify-content: center;
+            color: #fff;
+            padding: 10px;
+            border-radius: 0 0 5px 5px ;
+            background-color:#1cacb6;
+        }
+
 
     </style>
 </head>
